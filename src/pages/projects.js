@@ -10,6 +10,7 @@ import comingsoon from "../../public/images/projects/comingsoon.png";
 import loading from "../../public/images/projects/robin.gif";
 import proj1 from "../../public/images/projects/kpukmteti24.png"
 import proj2 from "../../public/images/projects/findit25.png"
+import proj3 from "../../public/images/projects/go.png"
 
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion, useMotionValue } from "framer-motion";
@@ -248,7 +249,7 @@ export default function Projects() {
             text="From Imagination to Infinity ✨"
             className="mb-16 !text-7xl !leading-tight lg:!text-6xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
-          <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+          <div className="grid grid-cols-24 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
                 type="Web Development"
@@ -272,6 +273,7 @@ export default function Projects() {
                 github="https://github.com/findit25-UGM"
               />
             </div>
+
             <div className="col-span-6 sm:col-span-12">
               <Project
                 type="Web Development"
@@ -283,6 +285,17 @@ export default function Projects() {
                 github=""
               />
             </div>
+            <div className="col-span-6 sm:col-span-12">
+                <Project
+                type="BackEnd API"
+                tools="Go | MongoDB"
+                title="Book Management API"
+                img={proj3}
+                date="2024"
+                link="https://github.com/aevryiam/Pelatihan-KMTETI-GoHTTP"
+                github=""
+                />
+              </div>
           </div>
 
           <div>

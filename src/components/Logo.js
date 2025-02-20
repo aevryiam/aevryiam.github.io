@@ -12,9 +12,9 @@ const Logo = () => {
         className="flex items-center justify-center rounded-full w-16 h-18   text-white dark:border-1 dark:border-solid dark:border-dark"
       >
         <img
-          src="/cosmos.png"
+          src="/cosmic.png"
           alt="Logo"
-          className="object-contain rounded-full w-auto h-auto py-2 px-2"
+          className="object-contain rounded-full w-auto h-auto py-2 px-2 bg-white"
         />
       </MotionLink>
     </div>

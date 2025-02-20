@@ -116,7 +116,7 @@ const Navbar = () => {
         >
           <motion.a
               target={"_blank"}
-              className="w-6 mr-3"
+              className="w-6 mr-3 bg-white rounded"
               href="https://www.linkedin.com/in/ilham-yusuf-wiam/"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -125,7 +125,7 @@ const Navbar = () => {
               </motion.a>
           <motion.a
             target={"_blank"}
-            className="w-7 mr-3"
+            className="w-6 mr-3 bg-white rounded"
             href="https://github.com/aevryiam"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -136,7 +136,7 @@ const Navbar = () => {
 
           <motion.a
             target={"_blank"}
-            className="w-7 mx-3 rounded-full"
+            className="w-6 mx-3 bg-white rounded"
             href="https://instagram.com/aevryiam"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -146,7 +146,7 @@ const Navbar = () => {
           </motion.a>
           <motion.a
             target={"_blank"}
-            className="w-7 mr-3"
+            className="w-6 mr-3 bg-white rounded"
             href="https://wa.me/6281226409247"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}

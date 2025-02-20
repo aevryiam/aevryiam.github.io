@@ -14,7 +14,7 @@ const Logo = () => {
         <img
           src="/cosmic.png"
           alt="Logo"
-          className="object-contain rounded-full w-auto h-auto py-2 px-2 bg-white"
+          className="object-contain rounded-full w-auto h-auto py-2 px-2 bg-light/75"
         />
       </MotionLink>
     </div>

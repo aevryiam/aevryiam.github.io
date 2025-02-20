@@ -7,10 +7,11 @@ import Link from "next/link";
 import { useRef } from "react";
 
 import comingsoon from "../../public/images/projects/comingsoon.png";
-import loading from "../../public/images/projects/robin.gif";
+import loading from "../../public/images/projects/cs2.gif";
 import proj1 from "../../public/images/projects/kpukmteti24.png"
 import proj2 from "../../public/images/projects/findit25.png"
 import proj3 from "../../public/images/projects/go.png"
+import proj4 from "../../public/images/projects/portfolio.png"
 
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion, useMotionValue } from "framer-motion";
@@ -285,6 +286,17 @@ export default function Projects() {
                 github=""
               />
             </div>
+            <div className="col-span-6 sm:col-span-12">
+                <Project
+                type="Web Development"
+                tools="Nextjs | Tailwind CSS | Framer Motion"
+                title="Portofolio Website"
+                img={proj4}
+                date="2024"
+                link="https://aboutiamyw.vercel.app"
+                github=""
+                />
+              </div>
             <div className="col-span-6 sm:col-span-12">
                 <Project
                 type="BackEnd API"

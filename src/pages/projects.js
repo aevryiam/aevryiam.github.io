@@ -308,6 +308,50 @@ export default function Projects() {
                 github=""
                 />
               </div>
+            <div className="col-span-6 sm:col-span-12">
+                <Project
+                type="Algorithm Visualization"
+                tools="Next.js | React | TypeScript | Tailwind CSS"
+                title="Dijkstra & A* Pathfinder"
+                img={comingsoon}
+                date="2025"
+                link="https://github.com/aevryiam/pathfinder"
+                github=""
+                />
+              </div>
+            <div className="col-span-6 sm:col-span-12">
+                <Project
+                type="Discord Bot"
+                tools="JavaScript | Discord.js | Node.js"
+                title="Auto Reply Bot Discord"
+                img={comingsoon}
+                date="2025"
+                link="https://github.com/aevryiam/discord_autoreply_bot"
+                github=""
+                />
+              </div>
+            <div className="col-span-6 sm:col-span-12">
+                <Project
+                type="Algorithm Implementation"
+                tools="C++ | ASCII Map Visualization"
+                title="A* Algorithm (C++)"
+                img={comingsoon}
+                date="2025"
+                link="https://github.com/aevryiam/ASD-AStar-Algorithm-Map"
+                github=""
+                />
+              </div>
+            <div className="col-span-6 sm:col-span-12">
+                <Project
+                type="Algorithm Implementation"
+                tools="C++ | ASCII Map Visualization"
+                title="Dijkstra Algorithm (C++)"
+                img={comingsoon}
+                date="2025"
+                link="https://github.com/aevryiam/ASD-Dijkstra-Algorithm-Map"
+                github=""
+                />
+              </div>
           </div>
 
           <div>

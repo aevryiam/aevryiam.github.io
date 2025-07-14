@@ -77,7 +77,7 @@ const Experience = () => {
           position="BackEnd Developer"
           company="Technocorner UGM 2025"
           time="October 2024 - June 2025"
-          companyLink="https://www.technocorner.id/"
+          companyLink="https://technocorner25demo.vercel.app/"
           work="At Technocorner UGM 2025, I worked as a BackEnd Developer. We are using Express.js for the backend and MongoDB for the database."
           />
           <Details

@@ -152,8 +152,8 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
           </Link>
           <Link
             href={link}
-            className="ml-4 rounded-lg
-             bg-dark p-2 px-6 text-lg font-semibold
+            className="ml-4 
+             p-2 px-6 text-lg font-semibold
              sm:px-4 sm:text-base rounded-lg border-2 border-solid bg-dark
             capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
             dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
@@ -214,8 +214,8 @@ const Project = ({ title, type, img, link, tools }) => {
           <Link
             href={link}
             className="rounded-lg
-             bg-dark mt-2 px-6 py-2 text-lg font-semibold
-             sm:px-4 sm:text-base rounded-lg border-2 border-solid bg-dark
+              mt-2 px-6 py-2 text-lg font-semibold
+             sm:px-4 sm:text-base border-2 border-solid bg-dark
             capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
             dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
             md:p-2 md:px-4 md:text-base

@@ -42,7 +42,7 @@ export default function Home() {
                 text="Hey, I’m I'am"
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
-              <div className="flex w-full items-center items-start lg:w-full  lg:!justify-center  sm:!justify-center  md:!text-center md:inline-block md:w-full">
+              <div className="flex w-full items-start lg:w-full  lg:!justify-center  sm:!justify-center  md:!text-center md:inline-block md:w-full">
                 <h2 className="animate-text bg-gradient-to-r from-lightGreen via-lightGreen to-slideGreen bg-clip-text text-transparent font-semibold capitalize !text-4xl xl:!text-4xl lg:!text-4xl md:!text-4xl sm:!text-3xl">
                   Web Developer | IoT Enthusiast | Tech Explorer
                 </h2>

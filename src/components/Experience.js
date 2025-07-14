@@ -68,7 +68,7 @@ const Experience = () => {
           <Details
             position="BackEnd Developer"
             company="FindIT UGM 2025"
-            time="October 2024 - Now"
+            time="October 2024 - May 2025"
             companyLink="https://www.find-it.id/"
             work="At FindIT UGM 2025, I worked as a BackEnd Developer. We are using Express.js for the backend and MongoDB for the database. In 2025, there is an update for payment gateaway and it using MidTrans API that different from previous years.
             My roles as a BackEnd Developer are to create API and integrate it with the frontend."
@@ -76,9 +76,16 @@ const Experience = () => {
           <Details
           position="BackEnd Developer"
           company="Technocorner UGM 2025"
-          time="October 2024 - Now"
+          time="October 2024 - June 2025"
           companyLink="https://www.technocorner.id/"
           work="At Technocorner UGM 2025, I worked as a BackEnd Developer. We are using Express.js for the backend and MongoDB for the database."
+          />
+          <Details
+          position="FrontEnd Developer"
+          company="PIONIR Gadjah Mada 2025"
+          time="March 2025 - Now"
+          companyLink="https://pionir.ugm.ac.id/"
+          work="At PIONIR Gadjah Mada 2025, I worked as a FrontEnd Developer. We are using Next 15 App Router as the main framework. My role involves creating pages, components, and integrating with Strapi CMS for content management. I also handle 3D Map of  Universitas Gadjah Mada using Three.js and React Three Fiber, enhancing the user experience with interactive 3D elements."
           />
           
         </ul>

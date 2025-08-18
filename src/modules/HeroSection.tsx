@@ -47,25 +47,25 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div ref={heroRef} className="space-y-8">
           <h1
             ref={titleRef}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight"
           >
             Hi, I&apos;m{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
               Ilham Yusuf Wi&apos;am
             </span>
           </h1>
           
           <p
             ref={subtitleRef}
-            className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             A passionate{' '}
-            <span className="font-semibold text-blue-600">Engineer</span>{' '}
+            <span className="font-semibold text-blue-600 dark:text-blue-400">Engineer</span>{' '}
             creating amazing digital experiences with modern technologies
           </p>
           
@@ -94,8 +94,8 @@ const HeroSection = () => {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
+          <div className="w-6 h-10 border-2 border-gray-400 dark:border-gray-500 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-gray-400 dark:bg-gray-500 rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </div>

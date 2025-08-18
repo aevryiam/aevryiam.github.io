@@ -80,25 +80,25 @@ const SkillsSection = () => {
   // ];
 
   return (
-    <section id="skills" ref={skillsRef} className="py-20 bg-gray-50">
+    <section id="skills" ref={skillsRef} className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Skills
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Here are my technical skills and the services I can provide to help bring your ideas to life.
           </p>
         </div>
 
         {/* Skills */}
         <div className="mb-20">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Technical Skills</h3>
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">Technical Skills</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="skill-card bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
+                className="skill-card bg-white dark:bg-gray-700 rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-600"
               >
                 <div className="text-center">
                   <div className="mb-3 flex justify-center">
@@ -110,8 +110,8 @@ const SkillsSection = () => {
                       className="object-contain"
                     />
                   </div>
-                  <h4 className="font-semibold text-gray-800 text-sm mb-1">{skill.name}</h4>
-                  <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+                  <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm mb-1">{skill.name}</h4>
+                  <span className="text-xs text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-600 px-2 py-1 rounded-full">
                     {skill.category}
                   </span>
                 </div>

@@ -117,20 +117,20 @@ const ProjectsSection = () => {
   });
 
   return (
-    <section id="projects" ref={projectsRef} className="py-20 bg-gray-50">
+    <section id="projects" ref={projectsRef} className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             My Projects
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Here are some of the projects I&apos;ve worked on. Each project represents a unique challenge and learning experience.
           </p>
         </div>
 
         {/* Filter Buttons */}
         <div className="flex justify-center mb-12">
-          <div className="bg-white rounded-lg shadow-md p-2 flex gap-2">
+          <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-2 flex gap-2">
             {['all', 'website', 'other'].map((filterType) => (
               <button
                 key={filterType}
@@ -138,7 +138,7 @@ const ProjectsSection = () => {
                 className={`px-6 py-2 rounded-md font-medium transition-all duration-200 ${
                   filter === filterType
                     ? 'bg-blue-600 text-white shadow-md'
-                    : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20'
                 }`}
               >
                 {filterType.charAt(0).toUpperCase() + filterType.slice(1)}
@@ -152,7 +152,7 @@ const ProjectsSection = () => {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className={`project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
+              className={`project-card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${
                 project.featured ? 'lg:col-span-1' : ''
               }`}
             >
@@ -177,11 +177,11 @@ const ProjectsSection = () => {
 
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-4 line-clamp-3">
+                <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
                   {project.description}
                 </p>
 
@@ -190,7 +190,7 @@ const ProjectsSection = () => {
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full"
+                      className="bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-200 text-xs font-medium px-2.5 py-0.5 rounded-full"
                     >
                       {tech}
                     </span>

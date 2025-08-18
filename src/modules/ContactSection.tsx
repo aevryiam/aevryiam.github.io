@@ -218,13 +218,13 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" ref={contactRef} className="py-20 bg-white">
+    <section id="contact" ref={contactRef} className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Get In Touch
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Have a project in mind or want to collaborate? I&apos;d love to hear from you. 
             Let&apos;s create something amazing together!
           </p>
@@ -234,10 +234,10 @@ const ContactSection = () => {
           {/* Contact Information */}
           <div ref={infoRef} className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 Let&apos;s Connect
               </h3>
-              <p className="text-gray-600 mb-8 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                 I&apos;m always open to discussing new opportunities, creative projects, 
                 or just having a chat about technology and development. Feel free to reach out!
               </p>
@@ -248,14 +248,14 @@ const ContactSection = () => {
                 const IconComponent = item.icon;
                 return (
                   <div key={index} className="flex items-center space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <IconComponent className="w-6 h-6 text-blue-600" />
+                    <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">{item.title}</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-white">{item.title}</h4>
                       <a
                         href={item.link}
-                        className="text-blue-600 hover:text-blue-800 transition-colors duration-200"
+                        className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors duration-200"
                         target={item.link.startsWith('http') ? '_blank' : '_self'}
                         rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                       >
@@ -269,7 +269,7 @@ const ContactSection = () => {
 
             {/* Social Links */}
             <div className="pt-8">
-              <h4 className="font-semibold text-gray-900 mb-4">Follow Me</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 {[
                   { name: 'GitHub', url: 'https://github.com/aevryiam', icon: Github },
@@ -283,7 +283,7 @@ const ContactSection = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 hover:bg-blue-600 hover:text-white transition-all duration-200 transform hover:scale-110"
+                      className="w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-blue-600 hover:text-white transition-all duration-200 transform hover:scale-110"
                       title={social.name}
                     >
                       <IconComponent className="w-5 h-5" />
@@ -298,7 +298,7 @@ const ContactSection = () => {
           <div ref={formRef}>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="flex items-center text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   <User className="w-4 h-4 mr-2" />
                   Name *
                 </label>
@@ -309,13 +309,13 @@ const ContactSection = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 bg-white dark:bg-gray-700"
                   placeholder="Your full name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="flex items-center text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   <Mail className="w-4 h-4 mr-2" />
                   Email *
                 </label>
@@ -326,13 +326,13 @@ const ContactSection = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 bg-white dark:bg-gray-700"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="flex items-center text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   <MessageSquare className="w-4 h-4 mr-2" />
                   Message *
                 </label>
@@ -343,7 +343,7 @@ const ContactSection = () => {
                   onChange={handleInputChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 bg-white dark:bg-gray-700"
                   placeholder="Tell me about your project or just say hello!"
                 />
               </div>
@@ -362,18 +362,18 @@ const ContactSection = () => {
               {submitStatus.type && (
                 <div className={`mt-4 p-4 rounded-lg text-center transition-all duration-300 ${
                   submitStatus.type === 'success' 
-                    ? 'bg-green-100 text-green-800 border border-green-200' 
-                    : 'bg-red-100 text-red-800 border border-red-200'
+                    ? 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-400 border border-green-200 dark:border-green-700' 
+                    : 'bg-red-100 dark:bg-red-900/20 text-red-800 dark:text-red-400 border border-red-200 dark:border-red-700'
                 }`}>
                   <div className="flex items-center justify-center space-x-2">
                     {submitStatus.type === 'success' ? (
-                      <div className="w-5 h-5 text-green-600">
+                      <div className="w-5 h-5 text-green-600 dark:text-green-400">
                         <svg fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
                       </div>
                     ) : (
-                      <div className="w-5 h-5 text-red-600">
+                      <div className="w-5 h-5 text-red-600 dark:text-red-400">
                         <svg fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                         </svg>

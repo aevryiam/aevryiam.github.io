@@ -105,13 +105,13 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="experience" ref={experienceRef} className="py-20 bg-white">
+    <section id="experience" ref={experienceRef} className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Experience & Education
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             My journey in technology and education, from learning fundamentals to building real-world applications.
           </p>
         </div>
@@ -119,36 +119,36 @@ const ExperienceSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Experience */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Experience</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Experience</h3>
             <div className="space-y-6">
               {experiences.map((exp, index) => (
                 <div
                   key={index}
-                  className="experience-card bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 border-l-4 border-blue-600 hover:shadow-lg transition-all duration-300"
+                  className="experience-card bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl p-6 border-l-4 border-blue-600 dark:border-blue-400 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                    <h4 className="text-xl font-bold text-gray-900">{exp.title}</h4>
-                    <span className="text-sm font-medium text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
+                    <h4 className="text-xl font-bold text-gray-900 dark:text-white">{exp.title}</h4>
+                    <span className="text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-800 px-3 py-1 rounded-full">
                       {exp.type}
                     </span>
                   </div>
                   
-                  <div className="flex items-center text-gray-600 mb-2">
+                  <div className="flex items-center text-gray-600 dark:text-gray-300 mb-2">
                     <span className="font-medium">{exp.company}</span>
                     <span className="mx-2">•</span>
                     <span className="text-sm">{exp.period}</span>
                   </div>
                   
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                     {exp.description}
                   </p>
                   
                   <div className="mb-4">
-                    <h5 className="font-semibold text-gray-900 mb-2">Key Achievements:</h5>
+                    <h5 className="font-semibold text-gray-900 dark:text-white mb-2">Key Achievements:</h5>
                     <ul className="space-y-1">
                       {exp.achievements.map((achievement, achIndex) => (
-                        <li key={achIndex} className="text-sm text-gray-600 flex items-start">
-                          <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <li key={achIndex} className="text-sm text-gray-600 dark:text-gray-300 flex items-start">
+                          <span className="w-2 h-2 bg-green-500 dark:bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
                           {achievement}
                         </li>
                       ))}
@@ -159,7 +159,7 @@ const ExperienceSection = () => {
                     {exp.technologies.map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="bg-white text-gray-700 text-xs font-medium px-3 py-1 rounded-full border"
+                        className="bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-medium px-3 py-1 rounded-full border border-gray-200 dark:border-gray-600"
                       >
                         {tech}
                       </span>
@@ -172,37 +172,37 @@ const ExperienceSection = () => {
 
           {/* Education */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Education</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Education</h3>
             <div className="space-y-6">
               {education.map((edu, index) => (
                 <div
                   key={index}
-                  className="experience-card bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 border-l-4 border-green-600 hover:shadow-lg transition-all duration-300"
+                  className="experience-card bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-xl p-6 border-l-4 border-green-600 dark:border-green-400 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                    <h4 className="text-xl font-bold text-gray-900">{edu.title}</h4>
-                    <span className="text-sm font-medium text-green-600 bg-green-100 px-3 py-1 rounded-full">
+                    <h4 className="text-xl font-bold text-gray-900 dark:text-white">{edu.title}</h4>
+                    <span className="text-sm font-medium text-green-600 dark:text-green-400 bg-green-100 dark:bg-green-800 px-3 py-1 rounded-full">
                       GPA: {edu.gpa}
                     </span>
                   </div>
                   
-                  <div className="flex items-center text-gray-600 mb-2">
+                  <div className="flex items-center text-gray-600 dark:text-gray-300 mb-2">
                     <span className="font-medium">{edu.institution}</span>
                     <span className="mx-2">•</span>
                     <span className="text-sm">{edu.period}</span>
                   </div>
                   
-                  <p className="text-gray-600 mb-4 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                     {edu.description}
                   </p>
                   
                   <div>
-                    <h5 className="font-semibold text-gray-900 mb-2">Relevant Courses:</h5>
+                    <h5 className="font-semibold text-gray-900 dark:text-white mb-2">Relevant Courses:</h5>
                     <div className="flex flex-wrap gap-2">
                       {edu.courses.map((course, courseIndex) => (
                         <span
                           key={courseIndex}
-                          className="bg-white text-gray-700 text-xs font-medium px-3 py-1 rounded-full border"
+                          className="bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-medium px-3 py-1 rounded-full border border-gray-200 dark:border-gray-600"
                         >
                           {course}
                         </span>

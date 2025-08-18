@@ -66,13 +66,13 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" ref={aboutRef} className="py-20 bg-white">
+    <section id="about" ref={aboutRef} className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             About Me
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Get to know more about who I am, what I do, and my skills in programming and technology.
           </p>
         </div>
@@ -85,18 +85,18 @@ const AboutSection = () => {
                 src="/images/profil.jpg" 
                 alt="Your Name" 
                 fill
-                className="object-cover shadow-2xl"
+                className="object-cover shadow-2xl rounded-lg"
               />
             </div>
           </div>
 
           {/* Content Section */}
           <div ref={contentRef} className="space-y-6">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Hello! I&apos;m a passionate engineer
             </h3>
             
-            <div className="space-y-4 text-gray-600 leading-relaxed">
+            <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
               <p>
                 Saya adalah seorang mahasiswa yang passionate dalam dunia teknologi terutama dalam bidang listrik dan software. 
                 Dengan latar belakang pendidikan di bidang elektro, saya terus belajar dan mengembangkan 
@@ -117,12 +117,12 @@ const AboutSection = () => {
 
             {/* Skills */}
             <div className="mt-8">
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">My Skills</h4>
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">My Skills</h4>
               <div className="grid grid-cols-2 gap-3">
                 {skills.map((skill, index) => (
                   <div
                     key={index}
-                    className="bg-gray-100 px-4 py-2 rounded-lg text-center text-gray-700 font-medium hover:bg-blue-100 transition-colors duration-200"
+                    className="bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-lg text-center text-gray-700 dark:text-gray-300 font-medium hover:bg-blue-100 dark:hover:bg-blue-800 transition-colors duration-200"
                   >
                     {skill}
                   </div>
@@ -132,17 +132,17 @@ const AboutSection = () => {
 
             {/* Fun Facts */}
             <div className="mt-8 grid grid-cols-3 gap-4 text-center">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <div className="text-2xl font-bold text-blue-600">5+</div>
-                <div className="text-sm text-gray-600">Projects</div>
+              <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">5+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Projects</div>
               </div>
-              <div className="bg-purple-50 p-4 rounded-lg">
-                <div className="text-2xl font-bold text-purple-600">1+</div>
-                <div className="text-sm text-gray-600">Years Learning</div>
+              <div className="bg-purple-50 dark:bg-purple-900/20 p-4 rounded-lg">
+                <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">1+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Years Learning</div>
               </div>
-              <div className="bg-green-50 p-4 rounded-lg">
-                <div className="text-2xl font-bold text-green-600">∞</div>
-                <div className="text-sm text-gray-600">Curiosity</div>
+              <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                <div className="text-2xl font-bold text-green-600 dark:text-green-400">∞</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Curiosity</div>
               </div>
             </div>
           </div>

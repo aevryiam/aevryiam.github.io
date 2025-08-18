@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
 import { Button } from '@/components';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -27,45 +28,62 @@ const ProjectsSection = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, product management, and payment integration.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Tailwind CSS'],
-      image: '/api/placeholder/400/250',
-      demoUrl: 'https://demo.example.com',
-      githubUrl: 'https://github.com/username/project',
+      title: 'PIONIR Gadjah Mada 2025',
+      description: 'Website yang memberikan informasi tentang PIONIR Gadjah Mada 2025. Website ini dibangun dengan React, Next.js, dan Tailwind CSS. Terdapat fitur notifikasi yang menggunakan sistem Firebase',
+      technologies: ['React', 'Next.js', 'Firebase', 'Docker', 'Tailwind CSS'],
+      image: '/images/pionir25.png',
+      demoUrl: 'https://pionirgadjahmada25.vercel.app/2025',
       featured: true,
       category: 'website',
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application built with Next.js and Firebase. Real-time updates and team collaboration features.',
-      technologies: ['Next.js', 'Firebase', 'TypeScript', 'Chakra UI'],
-      image: '/api/placeholder/400/250',
-      demoUrl: 'https://demo.example.com',
-      githubUrl: 'https://github.com/username/project',
+      title: 'Kembara Loka',
+      description: 'Website yang berisi map virtual 3D Universitas Gadjah Mada. Fiturnya ada infografis, panorama, dan mode jelajah.',
+      technologies: ['Three.js', 'Next.js', 'React', 'Blender'],
+      image: '/images/kembaraloka.webp',
+      demoUrl: 'https://kembaraloka-v3.vercel.app/kembaraloka/',
       featured: true,
       category: 'website',
     },
     {
       id: 3,
-      title: 'Weather App',
-      description: 'Beautiful weather application with location-based forecasts and interactive maps. Built with React and OpenWeather API.',
-      technologies: ['React', 'OpenWeather API', 'Chart.js', 'CSS3'],
-      image: '/api/placeholder/400/250',
-      demoUrl: 'https://demo.example.com',
-      githubUrl: 'https://github.com/username/project',
+      title: 'Technocorner UGM 2025',
+      description: 'Website pendaftaran event robotik di Universitas Gadjah Mada.',
+      technologies: ['Next.js', 'React', 'TailwindCSS', 'Node.js', 'Express', 'MongoDB'],
+      image: '/images/tc25.png',
+      demoUrl: 'https://technocorner25demo.vercel.app',
       featured: false,
-      category: 'other',
+      category: 'website',
     },
     {
       id: 4,
+      title: 'FindIT UGM 2025',
+      description: 'Website pendaftaran event IT di Universitas Gadjah Mada.',
+      technologies: ['Next.js', 'React', 'TailwindCSS', 'Node.js', 'Express', 'MongoDB', 'Midtrans'],
+      image: '/images/fi25.png',
+      demoUrl: 'https://find-it-demo.vercel.app/',
+      featured: false,
+      category: 'website',
+    },
+    {
+      id: 5,
       title: 'Portfolio Website',
       description: 'Personal portfolio website built with Next.js, featuring smooth animations and responsive design.',
       technologies: ['Next.js', 'GSAP', 'Tailwind CSS', 'TypeScript'],
-      image: '/api/placeholder/400/250',
-      demoUrl: 'https://demo.example.com',
-      githubUrl: 'https://github.com/username/project',
+      image: '/images/porto.png',
+      demoUrl: 'https://yusufwiamportfolio.vercel.app',
+      featured: false,
+      category: 'website',
+    },
+    {
+      id: 6,
+      title: 'KPU KMTETI 2024',
+      description: 'Website pemilihan ketua KMTETI untuk periode 2025.',
+      technologies: ['Next.js', 'React', 'TailwindCSS', 'Firebase'],
+      image: '/images/kpu24.png',
+      demoUrl: 'https://kpu-kmteti-2024.vercel.app',
+      githubUrl: 'https://github.com/aevryiam/KPU-KMTETI-2024',
       featured: false,
       category: 'website',
     },
@@ -139,16 +157,19 @@ const ProjectsSection = () => {
               }`}
             >
               {/* Project Image */}
-              <div className="relative h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
-                <div className="text-white text-4xl font-bold">{project.title.charAt(0)}</div>
-                {/* Replace with actual image */}
-                {/* <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                /> */}
+              <div className="relative h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center overflow-hidden">
+                {project.image.startsWith('/images/') ? (
+                  <Image 
+                    src={project.image} 
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="text-white text-4xl font-bold">{project.title.charAt(0)}</div>
+                )}
                 {project.featured && (
-                  <div className="absolute top-4 right-4 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold">
+                  <div className="absolute top-4 right-4 bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold z-10">
                     Featured
                   </div>
                 )}

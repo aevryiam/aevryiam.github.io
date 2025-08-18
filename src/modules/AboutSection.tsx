@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,16 +80,13 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image/Avatar Section */}
           <div ref={imageRef} className="flex justify-center">
-            <div className="relative">
-              <div className="w-80 h-80 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white text-6xl font-bold shadow-2xl">
-                YN
-              </div>
-              {/* You can replace this with an actual image */}
-              {/* <img 
-                src="/path-to-your-photo.jpg" 
+            <div className="relative w-120 h-120">
+              <Image
+                src="/images/profil.jpg" 
                 alt="Your Name" 
-                className="w-80 h-80 rounded-full object-cover shadow-2xl"
-              /> */}
+                fill
+                className="object-cover shadow-2xl"
+              />
             </div>
           </div>
 
@@ -100,15 +98,15 @@ const AboutSection = () => {
             
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                Saya adalah seorang mahasiswa yang passionate dalam dunia teknologi dan pengembangan software. 
-                Dengan latar belakang pendidikan di bidang informatika, saya terus belajar dan mengembangkan 
+                Saya adalah seorang mahasiswa yang passionate dalam dunia teknologi terutama dalam bidang listrik dan software. 
+                Dengan latar belakang pendidikan di bidang elektro, saya terus belajar dan mengembangkan 
                 kemampuan dalam berbagai teknologi modern.
               </p>
               
               <p>
                 Saya memiliki pengalaman dalam mengembangkan aplikasi web menggunakan teknologi terkini seperti 
                 React, Next.js, dan Node.js. Selain itu, saya juga tertarik dengan pengembangan mobile dan 
-                teknologi cloud computing.
+                teknologi blockchain.
               </p>
               
               <p>

@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,22 +39,23 @@ const SkillsSection = () => {
   }, []);
 
   const skills = [
-    { name: 'JavaScript', icon: '🟨', category: 'Frontend' },
-    { name: 'TypeScript', icon: '🔷', category: 'Frontend' },
-    { name: 'React', icon: '⚛️', category: 'Frontend' },
-    { name: 'Next.js', icon: '▲', category: 'Frontend' },
-    { name: 'HTML/CSS', icon: '🎨', category: 'Frontend' },
-    { name: 'Tailwind CSS', icon: '💨', category: 'Frontend' },
-    { name: 'Node.js', icon: '🟢', category: 'Backend' },
-    { name: 'Express.js', icon: '🚀', category: 'Backend' },
-    { name: 'Python', icon: '🐍', category: 'Backend' },
-    { name: 'Django', icon: '🎸', category: 'Backend' },
-    { name: 'PostgreSQL', icon: '🐘', category: 'Database' },
-    { name: 'MongoDB', icon: '🍃', category: 'Database' },
-    { name: 'Git', icon: '📝', category: 'Tools' },
-    { name: 'Docker', icon: '🐳', category: 'Tools' },
-    { name: 'AWS', icon: '☁️', category: 'Cloud' },
-    { name: 'Vercel', icon: '▲', category: 'Cloud' },
+    { name: 'JavaScript', icon: '/images/icons/js.png', category: 'Frontend' },
+    { name: 'TypeScript', icon: '/images/icons/typescript.png', category: 'Frontend' },
+    { name: 'React', icon: '/images/icons/react.png', category: 'Frontend' },
+    { name: 'Next.js', icon: '/images/icons/nextjs.png', category: 'Frontend' },
+    { name: 'Tailwind CSS', icon: '/images/icons/tailwind.png', category: 'Frontend' },
+    { name: 'Three.js', icon: '/images/icons/threejs.png', category: 'Frontend' },
+    { name: 'Node.js', icon: '/images/icons/nodejs.png', category: 'Backend' },
+    { name: 'Express.js', icon: '/images/icons/express.png', category: 'Backend' },    
+    { name: 'Bun', icon: '/images/icons/bun.png', category: 'Backend' },
+    { name: 'Python', icon: '/images/icons/python.png', category: 'Data Science' },
+    { name: 'Firebase', icon: '/images/icons/firebase.png', category: 'Database' },
+    { name: 'MongoDB', icon: '/images/icons/mongodb.png', category: 'Database' },
+    { name: 'Git', icon: '/images/icons/git.png', category: 'Tools' },
+    { name: 'Docker', icon: '/images/icons/docker.png', category: 'Tools' },
+    { name: 'Blender', icon: '/images/icons/blender.png', category: 'Tools' },
+    { name: 'Figma', icon: '/images/icons/figma.png', category: 'Tools' },
+    { name: 'Vercel', icon: '/images/icons/vercel.png', category: 'Cloud' },
   ];
 
   // const services = [
@@ -99,7 +101,15 @@ const SkillsSection = () => {
                 className="skill-card bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
               >
                 <div className="text-center">
-                  <div className="text-2xl mb-2">{skill.icon}</div>
+                  <div className="mb-3 flex justify-center">
+                    <Image 
+                      src={skill.icon} 
+                      alt={`${skill.name} icon`}
+                      width={32}
+                      height={32}
+                      className="object-contain"
+                    />
+                  </div>
                   <h4 className="font-semibold text-gray-800 text-sm mb-1">{skill.name}</h4>
                   <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
                     {skill.category}

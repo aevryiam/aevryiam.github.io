@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Button } from '@/components';
-import { Mail, Phone, MapPin, Linkedin, Github, Instagram, User, MessageSquare } from 'lucide-react';
+import { Mail, MapPin, Github, Instagram, User, MessageSquare } from 'lucide-react';
+import { FaWhatsapp, FaLinkedin } from "react-icons/fa";
 import { supabase, isSupabaseConfigured, debugSupabaseConfig, type ContactFormData } from '@/lib/supabase';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -198,19 +199,19 @@ const ContactSection = () => {
       link: 'mailto:yusufwiam@gmail.com'
     },
     {
-      icon: Phone,
-      title: 'Phone',
+      icon: FaWhatsapp,
+      title: 'Whatsapp',
       details: '+62 812 264 092 47',
-      link: 'tel:+6281226409247'
+      link: 'https://wa.me/6281226409247'
     },
     {
       icon: MapPin,
       title: 'Location',
       details: 'Yogyakarta, Indonesia',
-      link: '#'
+      link: 'https://maps.app.goo.gl/wSt4xmCn6U1EeEF98'
     },
     {
-      icon: Linkedin,
+      icon: FaLinkedin,
       title: 'LinkedIn',
       details: 'linkedin.com/in/ilham-yusuf-wiam',
       link: 'https://www.linkedin.com/in/ilham-yusuf-wiam/'
@@ -273,7 +274,7 @@ const ContactSection = () => {
               <div className="flex space-x-4">
                 {[
                   { name: 'GitHub', url: 'https://github.com/aevryiam', icon: Github },
-                  { name: 'LinkedIn', url: 'https://linkedin.com/in/ilham-yusuf-wiam', icon: Linkedin },
+                  { name: 'LinkedIn', url: 'https://linkedin.com/in/ilham-yusuf-wiam', icon: FaLinkedin },
                   { name: 'Instagram', url: 'https://instagram.com/aevryiam', icon: Instagram }
                 ].map((social, index) => {
                   const IconComponent = social.icon;

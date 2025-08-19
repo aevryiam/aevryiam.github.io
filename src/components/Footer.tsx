@@ -1,6 +1,7 @@
 'use client';
 
-import { Github, Linkedin, Instagram } from 'lucide-react';
+import { Github, Instagram } from 'lucide-react';
+import { FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -63,7 +64,7 @@ const Footer = () => {
           <div className="flex space-x-4 mt-4 md:mt-0">
             {[
               { name: 'GitHub', url: 'https://github.com/aevryiam', icon: Github },
-              { name: 'LinkedIn', url: 'https://linkedin.com/in/ilham-yusuf-wiam', icon: Linkedin },
+              { name: 'LinkedIn', url: 'https://linkedin.com/in/ilham-yusuf-wiam', icon: FaLinkedin },
               { name: 'Instagram', url: 'https://instagram.com/aevryiam', icon: Instagram },
             ].map((social) => {
               const IconComponent = social.icon;

@@ -34,6 +34,18 @@ const ExperienceSection = () => {
 
   const experiences = [
     {
+      period: 'August 2025 - Present',
+      title: 'Frontend Developer',
+      company: 'Porsenigama',
+      type: 'Seasonal',
+      description: 'Mengembangkan website menggunakan React, Next.js, dan TailwindCSS. Bekerja dalam tim untuk menciptakan solusi digital yang inovatif.',
+      technologies: ['React', 'Next.js', 'TailwindCSS', 'Docker', 'Firebase', 'GSAP'],
+      achievements: [
+        'Mengoptimalkan performa aplikasi',
+        'Mengembangkan API notifikasi yang digunakan oleh 1000+ users'
+      ]
+    },
+    {
       period: 'March 2025 - August 2025',
       title: 'Frontend Developer',
       company: 'PIONIR Gadjah Mada',

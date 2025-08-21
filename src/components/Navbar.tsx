@@ -62,13 +62,17 @@ const Navbar = () => {
     }`}>
       <div className={`mx-auto max-w-7xl transition-all duration-300 ease-in-out ${
         scrolled 
-          ? 'md:bg-white/95 md:dark:bg-gray-900/95 md:backdrop-blur-md md:shadow-lg md:border md:border-gray-200/20 md:dark:border-gray-700/20 md:rounded-2xl md:px-6 md:py-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md px-3 py-3' 
+          ? 'md:bg-gradient-to-r md:from-purple-900/90 md:via-blue-900/85 md:to-indigo-900/90 md:dark:from-purple-950/95 md:dark:via-blue-950/90 md:dark:to-indigo-950/95 md:backdrop-blur-md md:shadow-lg md:shadow-purple-500/20 md:border md:border-purple-500/30 md:dark:border-purple-400/20 md:rounded-2xl md:px-6 md:py-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md px-3 py-3' 
           : 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none px-3 py-3 md:px-4 md:py-4 lg:px-8'
       }`}>
         <div className="flex items-center justify-between w-full min-h-[3rem]">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
+            <span className={`text-xl md:text-2xl font-bold transition-colors duration-300 ${
+              scrolled 
+                ? 'md:text-white md:drop-shadow-lg text-gray-900 dark:text-white' 
+                : 'text-gray-900 dark:text-white'
+            }`}>
               I&apos;am
             </span>
           </div>
@@ -79,10 +83,18 @@ const Navbar = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200 relative group"
+                className={`px-3 py-2 text-sm font-medium transition-colors duration-200 relative group ${
+                  scrolled 
+                    ? 'text-white/90 hover:text-cyan-300' 
+                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
+                }`}
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-200 group-hover:w-full"></span>
+                <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-200 group-hover:w-full ${
+                  scrolled 
+                    ? 'bg-cyan-300' 
+                    : 'bg-blue-600 dark:bg-blue-400'
+                }`}></span>
               </button>
             ))}
           </div>

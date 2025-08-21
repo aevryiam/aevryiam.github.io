@@ -9,11 +9,24 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const scrollPosition = window.scrollY;
+      setScrolled(scrollPosition > 50); // Increased threshold for better stability
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Add throttling to prevent too many state updates
+    let ticking = false;
+    const throttledScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', throttledScroll, { passive: true });
+    return () => window.removeEventListener('scroll', throttledScroll);
   }, []);
 
   useEffect(() => {
@@ -52,7 +65,7 @@ const Navbar = () => {
           ? 'md:bg-white/95 md:dark:bg-gray-900/95 md:backdrop-blur-md md:shadow-lg md:border md:border-gray-200/20 md:dark:border-gray-700/20 md:rounded-2xl md:px-6 md:py-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md px-3 py-3' 
           : 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none px-3 py-3 md:px-4 md:py-4 lg:px-8'
       }`}>
-        <div className="flex items-center justify-between w-full">
+        <div className="flex items-center justify-between w-full min-h-[3rem]">
           {/* Logo */}
           <div className="flex-shrink-0">
             <span className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
@@ -74,11 +87,11 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile menu button - Compact */}
+          {/* Mobile menu button - Fixed size */}
           <div className="md:hidden flex-shrink-0">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-1.5 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="inline-flex items-center justify-center w-10 h-10 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-500 border border-gray-300 dark:border-gray-600"
               aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
@@ -108,13 +121,13 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu - Compact */}
+        {/* Mobile Navigation Menu - Consistent */}
         <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
           isMenuOpen 
             ? 'max-h-96 opacity-100 visible' 
             : 'max-h-0 opacity-0 invisible'
         }`}>
-          <div className="px-1 pt-2 pb-3 space-y-1 mt-3 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-lg border border-gray-200/20 dark:border-gray-700/20 shadow-lg mx-1">
+          <div className="px-2 pt-2 pb-3 space-y-1 mt-2 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-lg border border-gray-200/30 dark:border-gray-700/30 shadow-lg mx-2">
             {navItems.map((item) => (
               <button
                 key={item.name}

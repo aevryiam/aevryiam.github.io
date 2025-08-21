@@ -49,13 +49,13 @@ const Navbar = () => {
     }`}>
       <div className={`mx-auto max-w-7xl transition-all duration-300 ease-in-out ${
         scrolled 
-          ? 'md:bg-white/95 md:dark:bg-gray-900/95 md:backdrop-blur-md md:shadow-lg md:border md:border-gray-200/20 md:dark:border-gray-700/20 md:rounded-2xl md:px-6 md:py-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md px-4 sm:px-6 lg:px-8 py-4' 
-          : 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none px-4 sm:px-6 lg:px-8 py-4'
+          ? 'md:bg-white/95 md:dark:bg-gray-900/95 md:backdrop-blur-md md:shadow-lg md:border md:border-gray-200/20 md:dark:border-gray-700/20 md:rounded-2xl md:px-6 md:py-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md px-3 py-3' 
+          : 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none px-3 py-3 md:px-4 md:py-4 lg:px-8'
       }`}>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between w-full">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <span className="text-2xl font-bold text-gray-900 dark:text-white">
+            <span className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
               I&apos;am
             </span>
           </div>
@@ -74,16 +74,16 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile menu button - Fixed positioning */}
-          <div className="md:hidden">
+          {/* Mobile menu button - Compact */}
+          <div className="md:hidden flex-shrink-0">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="inline-flex items-center justify-center p-1.5 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-500"
               aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
               <svg
-                className={`h-6 w-6 transition-transform duration-200 ${isMenuOpen ? 'rotate-90' : ''}`}
+                className={`h-5 w-5 transition-transform duration-200 ${isMenuOpen ? 'rotate-90' : ''}`}
                 stroke="currentColor"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -108,18 +108,18 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu - Fixed below navbar */}
+        {/* Mobile Navigation Menu - Compact */}
         <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
           isMenuOpen 
             ? 'max-h-96 opacity-100 visible' 
             : 'max-h-0 opacity-0 invisible'
         }`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 mt-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-xl border border-gray-200/20 dark:border-gray-700/20 shadow-lg">
+          <div className="px-1 pt-2 pb-3 space-y-1 mt-3 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-lg border border-gray-200/20 dark:border-gray-700/20 shadow-lg mx-1">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100/50 dark:hover:bg-gray-800/50 block px-3 py-3 rounded-lg text-base font-medium w-full text-left transition-all duration-200"
+                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100/50 dark:hover:bg-gray-800/50 block px-3 py-2.5 rounded-md text-sm font-medium w-full text-left transition-all duration-200"
               >
                 {item.name}
               </button>

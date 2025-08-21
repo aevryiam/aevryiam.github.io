@@ -44,13 +44,13 @@ const Navbar = () => {
   return (
     <nav className={`navbar fixed z-50 w-full transition-all duration-300 ease-in-out ${
       scrolled 
-        ? 'top-4 px-4' 
+        ? 'md:top-4 md:px-4 top-0 px-0' 
         : 'top-0 px-0'
     }`}>
       <div className={`mx-auto max-w-7xl transition-all duration-300 ease-in-out ${
         scrolled 
-          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg border border-gray-200/20 dark:border-gray-700/20 rounded-2xl px-6 py-4' 
-          : 'bg-transparent px-4 sm:px-6 lg:px-8 py-4'
+          ? 'md:bg-white/95 md:dark:bg-gray-900/95 md:backdrop-blur-md md:shadow-lg md:border md:border-gray-200/20 md:dark:border-gray-700/20 md:rounded-2xl md:px-6 md:py-4 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md px-4 sm:px-6 lg:px-8 py-4' 
+          : 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none px-4 sm:px-6 lg:px-8 py-4'
       }`}>
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -74,12 +74,12 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button - Fixed positioning */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              aria-expanded="false"
+              aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -108,8 +108,8 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out ${
+        {/* Mobile Navigation Menu - Fixed below navbar */}
+        <div className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
           isMenuOpen 
             ? 'max-h-96 opacity-100 visible' 
             : 'max-h-0 opacity-0 invisible'

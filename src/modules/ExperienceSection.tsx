@@ -107,7 +107,7 @@ const ExperienceSection = () => {
       courses: ['Data Structures and Algorithms', 'Linear Algebra', 'Physics']
     },
     {
-      period: '2018 - 2021',
+      period: '2021 - 2024',
       title: 'SMA Jurusan IPA',
       institution: 'SMA Negeri 2 Kota Magelang',
       gpa: '89/100',
